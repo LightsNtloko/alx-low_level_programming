@@ -1,6 +1,6 @@
 #include <studio.h>
 
-ini main() {
+int main() {
 	puts("Programming is like building a multilingual puzzle,");
-	return O;
+	return 0;
 }
