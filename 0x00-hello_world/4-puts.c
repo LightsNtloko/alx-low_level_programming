@@ -1,2 +1,1 @@
-#!/bin/bash
-gcc $CFILE -o my_program
+gcc "$CFILE" -o my_program
