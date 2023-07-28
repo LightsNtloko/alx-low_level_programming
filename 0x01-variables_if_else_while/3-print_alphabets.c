@@ -9,12 +9,12 @@ int main(void)
 	char a;
 	char A;
 
-	while (a <= 'k')
+	while (a <= 'z')
 	{
 		putchar(a);
 		a++;
 	}
-	while (A <= 'K')
+	while (A <= 'Z')
 	{
 		putchar(A);
 		A++;
