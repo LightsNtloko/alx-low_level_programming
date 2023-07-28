@@ -3,31 +3,24 @@
 #include <stdio.h>
 
 /**
- * main - input numbers
- *
+ * main - Generate random numbers to detect a positive or negative n
  * Return: Always 0 (Success)
- *
  */
 int main(void)
 {
-       	int n;
+	int n;
+
 	srand(time(0));
 	n = rand() - RAND_MAX / 2;
-	
-
-	printf("%d ", n);
-	
-	
 	if (n > 0)
-	
 	{
-		printf("%d is positive\n", n);
+		printf("%d is positiv\n", n);
 	}
 	else if (n == 0)
 	{
 		printf("%d is zero\n", n);
 	}
-	else if (n < 0)
+	else
 	{
 		printf("%d is negative\n", n);
 	}
