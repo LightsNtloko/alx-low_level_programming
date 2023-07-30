@@ -15,19 +15,13 @@ int main(void)
 		{
 			putchar('0' + k / 10);
 			putchar('0' + k % 10);
-
-
-
 			putchar(' ');
-
-
-
 			putchar('0' + n / 10);
 			putchar('0' + n % 10);
 
 
 
-			if (k != 99 || n != 99)
+			if (k != 98 || n != 99)
 			{
 				putchar(',');
 				putchar(' ');
