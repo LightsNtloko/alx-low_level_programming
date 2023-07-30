@@ -11,7 +11,7 @@ int main(void)
 
 	for (k = 0; k < 100; k++)
 	{
-		for (n = k; n < 100; n++)
+		for (n = k + 1; n < 100; n++)
 		{
 			putchar('0' + k / 10);
 			putchar('0' + k % 10);
@@ -39,4 +39,3 @@ int main(void)
 
 	return (0);
 }
-
