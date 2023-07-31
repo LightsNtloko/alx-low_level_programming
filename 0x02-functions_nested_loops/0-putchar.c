@@ -1,5 +1,9 @@
 #include "main.h"
 
+/**
+ * main - Execute _putchar in lowercase alphabets
+ * Return: Always 0 (Success)
+ */
 int main(void)
 {
 	_putchar('_');
