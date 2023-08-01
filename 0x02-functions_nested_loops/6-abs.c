@@ -3,10 +3,10 @@
 /**
  * _abs - computes the absolute
  * value of an integer.
- * @k: The integer to compute the 
+ * @k: The integer to compute the
  * absolute value for.
  *
- * Return: The absolute value of 
+ * Return: The absolute value of
  * the integer.
  */
 int _abs(int k)
