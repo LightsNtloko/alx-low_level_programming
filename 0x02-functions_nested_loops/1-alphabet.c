@@ -5,18 +5,15 @@
  * Return: Always 0 (Success)
  */
 
-int main(void)
+void print_alphabet(void)
 {
 	char k;
 
 	k = 'a';
 
-	for (k = 'z'; k <= 'z'; k++)
+	for (k = 'a'; k <= 'z'; k++)
 	{
 		_putchar(k);
-		k++;
 	}
 	_putchar('\n');
-
-	return (0);
 }
