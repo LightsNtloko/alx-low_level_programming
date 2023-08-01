@@ -1,9 +1,12 @@
 #include "main.h"
 
 /**
- * main - Print a-z in lowercase
- * Discription: a-z alphabet
- * Return: Always 0 (Success)
+ * print_alphabet - Prints the lowercase alphabet from 'a' to 'z'
+ *
+ * Description: This function uses a loop to iterate through the lowercase
+ * alphabet and prints each character using the _putchar function.
+ *
+ * Return (void)
  */
 
 void print_alphabet(void)
