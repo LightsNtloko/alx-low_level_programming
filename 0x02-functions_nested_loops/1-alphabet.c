@@ -2,6 +2,7 @@
 
 /**
  * main - Print a-z in lowercase
+ * Discription: a-z alphabet 
  * Return: Always 0 (Success)
  */
 
