@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * main - Execute _putchar in lowercase alphabet
+ * main - Execute _putchar in lowercase letters
  * Return: Always 0 (Success)
  */
 int main(void)
