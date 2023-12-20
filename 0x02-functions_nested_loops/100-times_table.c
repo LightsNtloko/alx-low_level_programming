@@ -30,6 +30,10 @@ void print_times_table(int l)
 					{
 						_putchar((output / 10) + '0');
 					}
+					else
+					{
+						_putchar(' ');
+					}
 				}
 				_putchar('\n');
 		}
