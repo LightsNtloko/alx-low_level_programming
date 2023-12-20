@@ -8,6 +8,7 @@ void print_times_table(int l)
 	int digit, mult, output;
 
 	if (l <= 15 && l >= 0)
+	{
 		for (digit = 0; digit <= l; digit++)
 		{
 			_putchar('0');
@@ -29,7 +30,8 @@ void print_times_table(int l)
 					{
 						_putchar((output / 10) + '0');
 					}
-					_putchar('\n');
 				}
+				_putchar('\n');
 		}
+	}
 }
