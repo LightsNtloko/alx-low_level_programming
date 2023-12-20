@@ -5,7 +5,7 @@
  *
  * Description: This function uses a loop to iterate through lowercase alphabet and prints each character using the _putchar function
  *
- * Return: Always 0 (Success)
+ * Return (void)
  */
 
 int main(void)
