@@ -1,8 +1,6 @@
 #include "main.h"
-
 /**
- * print_times_table - Prints the n times table,
- * starting with 0.
+ * print_times_table - Prints the n times table, starting with 0.
  * @l: The number to start printing from
  */
 void print_times_table(int l)
@@ -12,7 +10,7 @@ void print_times_table(int l)
 	if (l <= 15 && l >= 0)
 		for (digit = 0; digit <= l; digit++)
 		{
-			_putchar('0')
+			_putchar('0');
 				for (mult = l; mult <= l; mult++)
 				{
 					_putchar(',');
