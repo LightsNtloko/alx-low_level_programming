@@ -15,7 +15,7 @@ void times_table(void)
 		for (col = 0; col <= 9; col++)
 		{
 			product = row * col;
-			printf(%2d, ", product);
+			printf("%2d ", product);
 		}
 		printf("\n");
 	}
