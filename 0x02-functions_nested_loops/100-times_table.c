@@ -7,17 +7,31 @@
  */
 void print_times_table(int l)
 {
-	if (l > 15 || l < 0)
-	{
-		break;
-	}
-	for (int k = 0; k <= l; k++)
-	{
-		for (int n = 0; n <= l; n++)
+	int digit, mult, output;
+
+	if (l <= 15 && l >= 0)
+		for (digit = 0; digit <= l; digit++)
 		{
-			int product = k * n;
-			printf("%d\t", product);
+			_putchar('0')
+				for (mult = l; mult <= l; mult++)
+				{
+					_putchar(',');
+					_putchar(' ');
+					output = digit * mult;
+					if (output <= 99)
+						_putchar(' ');
+					if (output <= 9)
+						_putchar(' ');
+					if (output >= 100)
+					{
+						_putchar((output /100) + '0');
+						_putchar(((output / 10) % 10) + '0');
+					}
+					else if (output <= 99 && output >= 10)
+					{
+						_putchar((output / 10) + '0');
+					}
+					_putchar('\n');
+				}
 		}
-		printf("\n");
-	}
 }
