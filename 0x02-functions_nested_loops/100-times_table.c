@@ -5,37 +5,33 @@
  */
 void print_times_table(int n)
 {
-	int digit, mult, output;
+	int row, col, result;
 
-	if (n <= 15 && n >= 0)
+	if (n < 0 || n > 15)
+		return;
+	for (row = 0; row <= n; row++)
 	{
-		for (digit = 0; digit <= l; digit++)
+		for (col = 0; col <= n; col++)
 		{
-			_putchar('0');
-				for (mult = 0; mult <= 9; mult++)
-				{
-					_putchar(',');
+			result = row * col;
+
+			if (col > 0)
+			{
+				_putchar(',');
+				_putchar(' ');
+
+				if (result < 10)
 					_putchar(' ');
-					output = digit * mult;
-					if (output <= 99)
-						_putchar(' ');
-					if (output <= 9)
-						_putchar(' ');
-					if (output >= 100)
-					{
-						_putchar((output /100) + '0');
-						_putchar(((output / 10) % 10) + '0');
-					}
-					else if (output <= 99 && output >= 10)
-					{
-						_putchar((output / 10) + '0');
-					}
-					else
-					{
-						_putchar(' ');
-					}
-				}
-				_putchar('\n');
+			}
+
+			if (result >= 100)
+				_putchar((result / 100) + '0');
+
+			if (result >= 10)
+				_putchar(((result / 10) % 10) + '0');
+
+			_putchar((result % 10) + '0');
 		}
+		_putchar('\n');
 	}
 }
