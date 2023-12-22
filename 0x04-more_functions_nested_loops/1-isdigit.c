@@ -11,9 +11,8 @@
 int _isdigit(int k)
 {
 	if (k >= 48 && k <= 57)
-	{	
+
 		return (1);
 	else
-	}	
 		return (0);
 }
