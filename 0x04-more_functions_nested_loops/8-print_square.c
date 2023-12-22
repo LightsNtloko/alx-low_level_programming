@@ -1,10 +1,10 @@
 #include "main.h"
 
 /**
- * print_squre - print a squre in the terminal
+ * print_square - print a squre in the terminal
  * @size: size of a squre
  */
-void print_squre(int area)
+void print_square(int area)
 {
 	if (area > 0)
 	{
