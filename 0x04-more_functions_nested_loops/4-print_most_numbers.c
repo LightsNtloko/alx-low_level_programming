@@ -18,5 +18,5 @@ void print_most_numbers(void)
 			}
 		}
 	}
-	_putchar(char);
+	_putchar('\n');
 }
