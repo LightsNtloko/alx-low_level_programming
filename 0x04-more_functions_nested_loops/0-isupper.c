@@ -10,12 +10,9 @@
  */
 int _isupper(int k)
 {
-	if (k >= 'a' && k <= 'z');
-	{
+	if (k >= 'A' && k <= 'Z')
+
 		return (1);
-	}
 	else
-	{
 		return (0);
-	}
 }
