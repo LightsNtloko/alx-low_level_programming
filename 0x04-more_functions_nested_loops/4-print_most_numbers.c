@@ -8,11 +8,11 @@ void print_most_numbers(void)
 {
 	int k;
 
-	for (k = 0; k < 10; k++)
+	for (k = 48; k < 58; k++)
 	{
-		if (k != 2)
+		if (k != 50)
 		{
-			if (k != 10)
+			if (k != 52)
 			{
 				_putchar(k);
 			}
