@@ -11,6 +11,6 @@ void _print_rev(char *k)
 		write(STDOUT_FILENO, "\n", 1);
 		return;
 	}
-	print_rev(k + 1);
+	_print_rev(k + 1);
 	write(STDOUT_FILENO, k, 1);
 }
