@@ -18,7 +18,7 @@ void _print_rev(char *s)
 	s--;
 	for (i = length; i > 0; i--)
 	{
-		write(STDOUT_FILENO, S, 1);
+		write(STDOUT_FILENO, s, 1);
 		s--;
 	}
 	write(STDOUT_FILENO, "\n", 1);
