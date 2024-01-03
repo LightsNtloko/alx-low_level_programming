@@ -16,10 +16,10 @@ void _print_rev(char *s)
 		s++;
 	}
 	s--;
-	for (i = length, i > 0; i--)
+	for (i = length; i > 0; i--)
 	{
-		write(*s);
+		write(STDOUT_FILENO, S, 1);
 		s--;
 	}
-	write('\n');
+	write(STDOUT_FILENO, "\n", 1);
 }
