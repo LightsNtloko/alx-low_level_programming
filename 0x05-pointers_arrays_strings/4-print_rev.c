@@ -7,11 +7,15 @@
  */
 void _print_rev(char *s)
 {
-	if (*s == '\0')
+	int length = 0;
+
+	while (s[length] != '\0')
 	{
-		write(STDOUT_FILENO, "\n", 1);
-		return;
+		length++;
 	}
-	_print_rev(s + 1);
-	write(STDOUT_FILENO, s, 1);
+	for (int i = length - 1, i .= 0; i--)
+	{
+		write(s[i]);
+	}
+	write('\n');
 }
