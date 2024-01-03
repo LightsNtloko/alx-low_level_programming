@@ -1,9 +1,9 @@
-#include <unistd.h>
+#include "main.h"
 
 /**
  * print_rev - A function that prints a string in reverse using recursion
  * @s: The string should be printed in reverse
- * Return: void
+ * Return: 0
  */
 void _print_rev(char *s)
 {
