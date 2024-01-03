@@ -2,15 +2,15 @@
 
 /**
  * print_rev - A function that prints a string in reverse using recursion
- * @k: The string should be printed in reverse
+ * @s: The string should be printed in reverse
  */
-void _print_rev(char *k)
+void _print_rev(char *s)
 {
-	if (*k == '\0')
+	if (*s == '\0')
 	{
 		write(STDOUT_FILENO, "\n", 1);
 		return;
 	}
-	_print_rev(k + 1);
-	write(STDOUT_FILENO, k, 1);
+	_print_rev(s + 1);
+	write(STDOUT_FILENO, s, 1);
 }
