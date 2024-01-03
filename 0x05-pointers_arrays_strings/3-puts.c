@@ -1,4 +1,4 @@
-#include <stdio.h>
+#include <unistd.h>
 
 /**
  * _puts - A function that prints a string
@@ -7,9 +7,9 @@
  */
 void _puts(char *str)
 {
-	for (; *str != '\0'; str++)
+	while (; *str != '\0'; str++)
 	{
-		printf(*str);
+		write(*str);
 	}
-	printf('\n');
+	write('\n');
 }
