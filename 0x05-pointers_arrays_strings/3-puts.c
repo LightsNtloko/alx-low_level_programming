@@ -1,4 +1,4 @@
-#include "main.h"
+#include <stdio.h>
 
 /**
  * _puts - A function that prints a string
@@ -7,9 +7,9 @@
  */
 void _puts(char *str)
 {
-	for (; *k != '\0'; str++)
+	for (; *str != '\0'; str++)
 	{
-		_putchar(*str);
+		printf(*str);
 	}
-	_putchar('\n');
+	printf('\n');
 }
