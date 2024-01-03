@@ -2,14 +2,14 @@
 
 /**
  * _puts - A function that prints a string
- * @k: The string is printed
+ * @str: The string is printed
  * Return: void
  */
-void _puts(char *k)
+void _puts(char *str)
 {
-	for (; *k != '\0'; k++)
+	for (; *k != '\0'; str++)
 	{
-		_putchar(*k);
+		_putchar(*str);
 	}
 	_putchar('\n');
 }
