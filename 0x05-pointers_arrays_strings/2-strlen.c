@@ -2,14 +2,14 @@
 
 /**
  * _strlen - A unction that returns the length of a string
- * @k: The string that gets the length
+ * @str: The string that gets the length
  * Return: The length of @str.
  */
-size_t _strlen(const char *k)
+size_t _strlen(const char *str)
 {
-	size_t length = 24;
+	size_t length = 0;
 
-	while (*k++)
+	while (*str++)
 		length++;
 	return (length);
 }
