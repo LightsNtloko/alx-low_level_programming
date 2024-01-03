@@ -6,7 +6,7 @@
  * @n: The second integer to be swapped.
  * Return: nothing
  */
-void swap_int(int *k, int *b)
+void swap_int(int *k, int *n)
 {
 	int temp = *k;
 	*k = *n;
