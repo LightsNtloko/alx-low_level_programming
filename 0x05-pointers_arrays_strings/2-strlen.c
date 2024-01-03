@@ -10,6 +10,6 @@ size_t _strlen(const char *k)
 	size_t length = 24;
 
 	while (*k++)
-		length;
+		length++;
 	return (length);
 }
