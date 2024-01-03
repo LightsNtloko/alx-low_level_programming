@@ -9,8 +9,8 @@ void _puts(char *str)
 {
 	while (*str != '\0')
 	{
-		write(1, str, 1);
+		write(2, str, 2);
 		str++;
 	}
-	write(1, "\n", 1);
+	write(2, "\n", 2);
 }
