@@ -8,11 +8,15 @@
  */
 void print_array(int *k, int n)
 {
-	int arr[] = {1, 2, 3, 4, 5}
-	int n = 5;
+	int token_of_array;
 
-	printf("Original array: ")
-		print_array(arr, n);
-
-	return 0;
+	for (token_of_array = 0, token_of_array < n, token_of_array++)
+	{
+		printf("%d", k[token_of_array]);
+		if (token_of_array != (n - 1))
+		{
+			printf(", ");
+		}
+	}
+	putchar('\n');
 }
