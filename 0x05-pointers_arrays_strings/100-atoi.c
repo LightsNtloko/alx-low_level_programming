@@ -13,13 +13,15 @@ int _atoi(char *k)
 	while (*k == ' ')
 		k++;
 
-	if (*k == '-' || *k == '+'){
+	if (*k == '-' || *k == '+')
+	{
 		if (*k == '-')
 			sign = -1;
 		k++;
 	}
 
-	while (*k >= '0' && *k <= '9'){
+	while (*k >= '0' && *k <= '9')
+	{
 		product = product * 10 + (*k - '0');
 		k++;
 	}
