@@ -7,17 +7,11 @@
  */
 void print_rev(char *s)
 {
-	int distance = 0;
-	while (s[distance] != '\0')
-	{
-		distance++;
-	}
+	int length = 0;
 
-	int i;
-	for (i = distance - 1; i >= 0; i--)
-	{
-		_putchar(s[i]);
-	}
-
+	while (s[length])
+		length++;
+	while (length--)
+		_putchar(s[length]);
 	_putchar('\n');
 }
