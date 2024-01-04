@@ -12,11 +12,12 @@ void puts2(char *k)
 		return;
 
 	int n = 0;
+
 	while (k[n] != '\0')
 	{
 		_putchar(k[n]);
 		n += 2;
 	}
 
-	_putcharr('\n');
+	_putchar('\n');
 }
