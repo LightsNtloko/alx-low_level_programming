@@ -12,7 +12,7 @@ void puts2(char *k)
 
 	while (k[n] != '\0')
 	{
-		if (k % 2 == 0)
+		if (n % 2 == 0)
 		{
 			_putchar(k[n]);
 		}
