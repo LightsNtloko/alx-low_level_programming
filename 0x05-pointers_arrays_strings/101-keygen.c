@@ -15,6 +15,12 @@ int main(void)
 
 	length = rand() % 15 + 6;
 
+	if (length > sizeof(password) - 1)
+	{
+		fprintf(stderr, "Generated password exceeds buffer size\n");
+		return (1);
+	}
+
 	for (k = 0; k < length; ++k)
 	{
 		password[k] = rand() % ('~' - ' ' + 1) + ' ';
