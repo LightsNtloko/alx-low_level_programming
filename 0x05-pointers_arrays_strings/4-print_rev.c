@@ -1,4 +1,4 @@
-#include "main.h"
+#include <stdio.h>
 
 /**
  * print_rev - A function that prints a string in reverse followed by a new line
@@ -6,7 +6,7 @@
  */
 void print_rev(char *s)
 {
-	if (*str == '\0')
+	if (*s == '\0')
 	{
 		printf("\n");
 		return;
