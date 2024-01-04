@@ -4,31 +4,46 @@
 
 /**
  * main - Generate a random valid password for the 101-crackme program
- * Return: 0 on success
+ * Return: Always 0.
  */
 int main(void)
 {
 	char password[21];
-	int k, length;
+	int k = 0; sum = 0, first_half1, second_half2;
 
-	srand(time(NULL));
+	srand(time(0));
 
-	length = rand() % 15 + 6;
-
-	if (length > sizeof(password) - 1)
+	while (sum < 2772)
 	{
-		fprintf(stderr, "Generated password exceeds buffer size\n");
-		return (1);
+		password[k] = 33 + rand() % 94;
+		sum += password[k++];
 	}
-
-	for (k = 0; k < length; ++k)
+	password[k] = '\0';
+	if (sum != 2772)
 	{
-		password[k] = rand() % ('~' - ' ' + 1) + ' ';
+		first_half1 = (sum - 2772) / 2;
+		second_half = (sum - 2772) / 2;
+
+		if ((sum - 2772) % 2 != 0)
+			first_half1++;
+
+		for (k = 0; password[k]; k++)
+		{
+			if (password[k] >= (33 + first_half1))
+			{
+				password[k] -= first_half1;
+				break;
+			}
+		}
+		for (k = 0; password[k]; k++)
+		{
+			if (password[k] >= (33 + second_half2))
+			{
+				password[k] -= second_half2;
+				break;
+			}
+		}
 	}
-
-	password[length] = '\0';
-
-	printf("Generated Password: %s\n", password);
-
+	printf("%s", password);
 	return (0);
 }
