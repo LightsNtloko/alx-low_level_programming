@@ -1,25 +1,28 @@
 #include "main.h"
 
 /**
- * print_rev - A function that prints a string in reverse using recursion
- * @s: The string should be printed in reverse
- * Return: 0
+ * print_rev - A function that prints a string in reverse followed by a new line
+ * @s: The string to be printed in reverse.
  */
-void _print_rev(char *s)
+void print_rev(char *s)
 {
-	int length = 0;
-	int i;
+	if (*str == '\0')
+	{
+		printf("\n");
+		return;
+	}
 
 	while (*s != '\0')
 	{
-		length++;
 		s++;
 	}
+
 	s--;
-	for (i = length; i > 0; i--)
+	while (s >= 0)
 	{
-		write(STDOUT_FILENO, s, 1);
-		s--;
+		printf("%c", *s);
+		str--;
 	}
-	write(STDOUT_FILENO, "\n", 1);
+
+	printf("\n");
 }
