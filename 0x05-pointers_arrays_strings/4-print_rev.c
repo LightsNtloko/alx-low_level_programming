@@ -18,7 +18,7 @@ void print_rev(char *s)
 	}
 
 	s--;
-	while (s >= 0)
+	while (s >= str)
 	{
 		printf("%c", *s);
 		str--;
