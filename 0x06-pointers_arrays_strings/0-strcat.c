@@ -6,13 +6,19 @@
  * @src: input value
  * Return: void
  */
-char *_strcat(char *dest, char *src, int k)
+char *_strcat(char *dest, char *src)
 {
-	int index = 0, dest_len = 0;
+	int length_of_string, y;
 
-	while (dest[index++])
-		dest_len++;
-	for (index = 0; src[index] && index < k; index++)
-		dest[dest_len++] = src[index];
+	length_of_string = 0;
+	while (dest[length_of_string] != '\0')
+	{
+		length_of_string++;
+	}
+	for (y = 0; src[y] != '\0'; y++, length_of_string++)
+	{
+		dest[length_of_string] = src[j];
+	}
+	dest[length_of_string] = '\0';
 	return (dest);
 }
