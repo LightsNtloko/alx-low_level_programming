@@ -7,24 +7,29 @@
  */
 int _atoi(char *k)
 {
-	int product = 0;
-	int sign = 1;
+	int n = 0;
+	unsigned int tk = 0;
+	int kay = 1;
+	int lit = 0;
 
-	while (*k == ' ')
-		k++;
-
-	if (*k == '-' || *k == '+')
+	while (k[n])
 	{
-		if (*k == '-')
-			sign = -1;
-		k++;
+		if (k[n] == 45)
+		{
+			kay *= -1;
+		}
+		while (k[n] >= 48 && k[n] <= 57)
+		{
+			lit = 1;
+			tk = (tk * 10) + (k[n] - '0');
+			n++;
+		}
+		if (lit == 1)
+		{
+			break;
+		}
+		n++;
 	}
-
-	while (*k >= '0' && *k <= '9')
-	{
-		product = product * 10 + (*k - '0');
-		k++;
-	}
-
-	return (product * sign);
+	tk *= kay;
+	return (tk);
 }
