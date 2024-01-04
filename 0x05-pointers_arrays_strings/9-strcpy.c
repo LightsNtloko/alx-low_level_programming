@@ -21,5 +21,5 @@ char *_strcpy(char *dest, char *src)
 		src++;
 	} while (do_copy != '\0');
 
-	return original_dest;
+	return (original_dest);
 }
