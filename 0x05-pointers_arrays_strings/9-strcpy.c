@@ -12,7 +12,7 @@ char *_strcpy(char *dest, char *src)
 	char *original_dest = dest;
 	char do_copy;
 
-	do{
+	do {
 		do_copy = *src;
 		*dest = do_copy;
 		dest++;
