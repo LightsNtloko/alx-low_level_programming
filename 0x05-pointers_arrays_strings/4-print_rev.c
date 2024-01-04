@@ -13,7 +13,8 @@ void print_rev(char *s)
 		distance++;
 	}
 
-	for (int i = distance - 1; i >= 0; i--)
+	int i;
+	for (i = distance - 1; i >= 0; i--)
 	{
 		_putchar(s[i]);
 	}
