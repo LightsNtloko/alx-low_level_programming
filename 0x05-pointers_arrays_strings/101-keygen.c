@@ -8,7 +8,7 @@
  */
 int main(void)
 {
-	char password[101];
+	char password[21];
 	int k, length;
 
 	srand(time(NULL));
