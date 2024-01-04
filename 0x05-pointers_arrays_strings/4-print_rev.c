@@ -18,10 +18,10 @@ void print_rev(char *s)
 	}
 
 	s--;
-	while (s >= str)
+	while (s >= s)
 	{
 		printf("%c", *s);
-		str--;
+		s--;
 	}
 
 	printf("\n");
