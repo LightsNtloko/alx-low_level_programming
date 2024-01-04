@@ -15,7 +15,7 @@ void puts_half(char *k)
 
 	initial = distance / 2;
 
-	while (k[initil] != '\0')
+	while (k[initial] != '\0')
 	{
 		_putchar(k[initial]);
 		initial++;
