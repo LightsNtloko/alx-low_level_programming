@@ -10,7 +10,7 @@ void puts_half(char *k)
 	int distance = 0;
 	int initial;
 
-	while (initial[distance] != '\0')
+	while (k[distance] != '\0')
 		distance++;
 
 	initial = distance / 2;
