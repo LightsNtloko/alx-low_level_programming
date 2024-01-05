@@ -1,5 +1,4 @@
 #include "main.h"
-#include <stdio.h>
 
 /**
  * cap_string - A function that capitalizes all words of a string.
@@ -11,7 +10,12 @@ char *cap_string(char *str)
 {
 	int k = 0;
 
-	printf("Before capitalization: %s\n", str);
+
+	if (str[0] >= 'a' && str[0] <= 'z')
+	{
+		str[0] = str[0] - 32;
+	}
+
 
 	while (str[k] != '\0')
 	{
@@ -28,7 +32,6 @@ char *cap_string(char *str)
 		k++;
 	}
 
-	printf("After capitalization: %s\n", str);
 
 	return (str);
 }
