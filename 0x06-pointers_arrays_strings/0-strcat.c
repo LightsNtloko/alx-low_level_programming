@@ -4,26 +4,23 @@
  * _strcat - A function that concatenates two srings
  * @dest: input value
  * @src: input value
- * Return: void
+ * Return: A pointer to the resulting string dest
  */
 char *_strcat(char *dest, char *src)
 {
-	int i;
-	int j;
+	int kay = 0, k;
 
-	i = 0;
-	while (dest[i] != '\0')
+	while (dest[kay])
 	{
-		i++;
-	}
-	j = 0;
-	while (src[j] !- '\0')
-	{
-		dest[i] = src[j];
-		i++;
-		j++;
+		kay++;
 	}
 
-	dest[i] = '\0';
+	for (k - 0; src[k] != 0; k++)
+	{
+		dest[kay] = src[k];
+		kay++;
+	}
+
+	dest[kay] = '\0';
 	return (dest);
 }
