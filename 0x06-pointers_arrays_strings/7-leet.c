@@ -8,32 +8,19 @@
  */
 char *leet(char *str)
 {
-	int k = 0;
-	char leet_map[] = {'4', '3', '0', '7', '1'};
+	int k, n;
+	char s1[] = "aAeEoOtTlL";
+	char s2[] = "4433007711";
 
-
-	while (str[k] != '\0')
+	for (k = 0; str[k] != '\0'; k++)
 	{
-		int i = 0;
-
-		while (i < 5)
+		for (n = 0; n < 10; n++)
 		{
-			if ((str[k] == 'a' || str[k] == 'A') && i == 0)
-				str[k] = leet_map[i];
-			else if ((str[k] == 'e' || str[k] == 'E') && i == 1)
-				str[k] = leet_map[i];
-			else if ((str[k] == 'o' || str[k] == 'O') && i == 2)
-				str[k] = leet_map[i];
-			else if ((str[k] == 't' || str[k] == 'T') && i == 3)
-				str[k] = leet_map[i];
-			else if ((str[k] == 'l' || str[k] == 'L') && i == 4)
-				str[k] = leet_map[i];
-
-
-			i++;
+			if (str[k] == s1[n])
+			{
+				str[k] = s2[n];
+			}
 		}
-		k++;
 	}
-
 	return (str);
 }
