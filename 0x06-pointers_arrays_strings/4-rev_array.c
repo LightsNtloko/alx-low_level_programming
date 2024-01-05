@@ -12,10 +12,10 @@ void reverse_array(int *k, int n)
 {
 	int l, temp;
 
-	for (l - 0; l < n / 2; l++)
+	for (l = 0; l < n / 2; l++)
 	{
 		temp = k[l];
 		k[l] = k[n - l - 1];
-		l[n - l - 1] = temp;
+		k[n - l - 1] = temp;
 	}
 }
