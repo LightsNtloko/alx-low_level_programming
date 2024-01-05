@@ -16,7 +16,7 @@ char *_strcat(char *dest, char *src)
 		kay++;
 	}
 
-	for (k - 0; src[k] != 0; k++)
+	for (k = 0; src[k] != 0; k++)
 	{
 		dest[kay] = src[k];
 		kay++;
