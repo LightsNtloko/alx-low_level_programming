@@ -11,16 +11,16 @@ char *rot13(char *str)
 {
 	int k;
 	int n;
-	char data1[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
-	char datarot[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
+	char input1[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+	char inputrot[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
 
 	for (k = 0; str[k] != '\0'; k++)
 	{
 		for (n = 0; n < 52; n++)
 		{
-			if (str[k] == data1[n])
+			if (str[k] == input1[n])
 			{
-				str[k] = datarot[n];
+				str[k] = inputrot[n];
 				break;
 			}
 		}
