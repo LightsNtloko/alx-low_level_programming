@@ -2,9 +2,9 @@
 
 /**
  * _memset - A function that fills memory with a constant byte
- * @s: The pointed destination
- * @b: The constant byte
- * @n: bytes
+ * @s: input
+ * @b: input
+ * @n: input
  * Return: s.
  */
 char *_memset(char *s, char b, unsigned int n)
