@@ -14,7 +14,7 @@ char *_strpbrk(char *s, char *accept)
 	{
 		if (strchr(accept, *s) != NULL)
 		{
-			return s;
+			return (s);
 		}
 		s++;
 	}
