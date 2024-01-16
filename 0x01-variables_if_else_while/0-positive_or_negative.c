@@ -3,12 +3,13 @@
 #include <stdio.h>
 
 /**
- * main - Determine if a number is zero, positive or negative
- * Return: Always 0 (Success)
+ * main - Determine if a number is positive, negative or zero
+ * Return: 0 (Success)
  */
 int main(void)
 {
 	int k;
+
 
 	srand(time(0));
 	k = rand() - RAND_MAX / 2;
