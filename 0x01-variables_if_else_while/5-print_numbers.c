@@ -11,5 +11,5 @@ int main(void)
 	for (khanyiso = 0; khanyiso < 10; khanyiso++)
 		printf("%d", khanyiso);
 	putchar('\n');
-	return(0);
+	return (0);
 }
