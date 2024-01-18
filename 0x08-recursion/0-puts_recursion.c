@@ -5,12 +5,15 @@
  * @kay: The string to be printed
  *
  */
-void _puts_recursion(char *s)
+void _puts_recursion(char *kay)
 {
-	if (*s == '\0')
+	if (*kay == '\0')
+	{
+		_putchar('\n');
 		return;
+	}
 
-	_putchar(*s);
-
-	_puts_recursion(s + 1);
+	_putchar(*kay);
+	kay++;
+	_puts_recursion(kay);
 }
