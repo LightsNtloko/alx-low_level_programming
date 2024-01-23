@@ -14,5 +14,6 @@ void _print_rev_recursion(char *kay)
 
 	kay++;
 	_print_rev_recursion(kay);
+	kay--;
 	_putchar(*kay);
 }
