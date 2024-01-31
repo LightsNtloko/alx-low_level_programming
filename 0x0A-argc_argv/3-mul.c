@@ -3,7 +3,7 @@
 #include <stdlib.h>
 
 /**
- * _atoi - Program that multiplies two numbers
+ * main - Program that multiplies two numbers
  * @argc: The number of arguments to be counted
  * @argv: The argumenent vector
  *
