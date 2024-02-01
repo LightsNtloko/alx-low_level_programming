@@ -9,20 +9,20 @@
  *
  * Return: The array to be filled with char
  */
-char *create_array(unsigned int size, char c)
+char *create_array(unsigned int magnitude, char k)
 {
 	unsigned int n;
 	char *m;
 
-	if (size == 0)
+	if (magnitude == 0)
 		return (NULL);
 
-	m = malloc(size * sizeof(char));
+	m = malloc(magnitude * sizeof(char));
 
 	if (m == NULL)
 		return (NULL);
 
-	for (n = 0; n < size; n++)
+	for (n = 0; n < magnitude; n++)
 	{
 		m[n] = c;
 	}
