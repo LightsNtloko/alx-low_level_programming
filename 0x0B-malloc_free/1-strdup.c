@@ -2,7 +2,8 @@
 #include <stdlib.h>
 
 /**
- * _strdub - Returns a pointer to a newly allocated space in memory
+ * _strdup - Returns a pointer to a newly allocated space in memory,
+ * which contains a copy of the string given as a paremeter
  * @str: The string to be duplicated
  *
  * Return: A pointer to the duplicated string, or NULL if no enough memory.
@@ -15,7 +16,9 @@ char *_strdup(char *str)
 	if (str == NULL)
 		return (NULL);
 
-	for (len = 0; str[len] != '\0'; len++);
+	for (len = 0; str[len] != '\0'; len++)
+	{
+	}
 
 	dub_str = malloc((len + 1) * sizeof(char));
 
