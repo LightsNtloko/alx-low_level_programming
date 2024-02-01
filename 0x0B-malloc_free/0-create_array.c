@@ -24,7 +24,7 @@ char *create_array(unsigned int magnitude, char k)
 
 	for (n = 0; n < magnitude; n++)
 	{
-		m[n] = c;
+		m[n] = k;
 	}
 
 	return (m);
