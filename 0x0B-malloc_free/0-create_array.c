@@ -9,7 +9,7 @@
  *
  * Return: The array to be filled with char
  */
-char *create_array(unsigned int size, char k)
+char *create_array(unsigned int size, char c)
 {
 	unsigned int n;
 	char *m;
@@ -24,7 +24,7 @@ char *create_array(unsigned int size, char k)
 
 	for (n = 0; n < size; n++)
 	{
-		m[n] = k;
+		m[n] = c;
 	}
 
 	return (m);
