@@ -17,12 +17,15 @@ char **strtow(char *str)
 
 	if (str == NULL || *str == '\0')
 		return (NULL);
+
 	word_count = count_words(str);
 	if (word_count == 0)
 		return (NULL);
+
 	words = malloc((word_count + 1) * sizeof(char *));
 	if (words == NULL)
 		return (NULL);
+
 	j = 0;
 	for (i = 0; str[i] != '\0'; i++)
 	{
@@ -60,10 +63,19 @@ int count_words(char *str)
 {
 	int count = 0, i = 0;
 
-	for (i = 0; str[i] != '\0'; i++)
+	while (str[i] != '\0')
 	{
-		if (str[i] != ' ' && (str[i + 1] == ' ' || str[i + 1] == '\0'))
+		if (str[i] != ' ')
+		{
 			count++;
+			while (str[i] != ' ' && str[i] != '\0')
+				i++;
+		}
+		else
+		{
+			while (str[i] == ' ')
+				i++;
+		}
 	}
 	return (count);
 }
@@ -84,8 +96,10 @@ char *duplicate_word(char *str, int start, int end)
 	word = malloc((end - start + 1) * sizeof(char));
 	if (word == NULL)
 		return (NULL);
+
 	for (i = start, j = 0; i < end; i++, j++)
 		word[j] = str[i];
+
 	word[j] = '\0';
 
 	return (word);
