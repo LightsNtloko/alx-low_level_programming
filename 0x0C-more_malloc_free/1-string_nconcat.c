@@ -7,9 +7,10 @@
  * @s2: The second input string
  * @n: The maximum number of bytes of s2 to concatenate
  *
- * Return: A pointer to the conaenated string, or NULL on failure.
+ * Return: A pointer to the conaenated string
+ * If memory allocation fails or if both s1 and s2 are NULL, returns NULL.
  */
-char *string_nconcat(ichar *s1, char *s2, unsigned int n)
+char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	unsigned int length1 = 0, length2 = 0, i, j;
 	char *concat;
