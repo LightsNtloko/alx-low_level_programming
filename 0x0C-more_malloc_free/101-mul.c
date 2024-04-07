@@ -75,27 +75,27 @@ int main(int argc, char *argv[])
  */
 void multiply(char *num1, char *num2)
 {
-	int length1 = 0, length2 = 0, length_output = 0;
+	int len1 = 0, len2 = 0, len_output = 0;
 	int t, u, carry, product;
 
 	char *output;
 
-	while (num1[length1])
-		length1++;
-	while (num2[length2])
-		length2++;
+	while (num1[len1])
+		len1++;
+	while (num2[len2])
+		len2++;
 
-	length_output = length1 + length2;
-	output = malloc(sizeof(char) * (length_output + 1));
+	len_output = len1 + len2;
+	output = malloc(sizeof(char) * (len_output + 1));
 
 	if (output == NULL)
 		print_error();
-	for (t = 0; t < length_output; t++)
+	for (t = 0; t < len_output; t++)
 		output[t] = '0';
-	for (t = length1 - 1; t >= 0; t--)
+	for (t = len1 - 1; t >= 0; t--)
 	{
 		carry = 0;
-		for (u = length2 - 1; u >= 0; u--)
+		for (u = len2 - 1; u >= 0; u--)
 		{
 			product = (num1[t] - '0') * (num2[u] - '0') +
 				(output[t + u + 1] - '0') + carry;
