@@ -29,42 +29,12 @@ int is_digit(char k)
 }
 
 /**
- * print_error - The funcion prints the "Erro" and exits with status 98.
+ * print_error - The funcion prints the "Error" and exits with status 98.
  */
 void print_error(void)
 {
 	printf("Error\n");
 	exit(98);
-}
-
-/**
- * main - The main entry point of the program
- * @argc: The number of command-line arguments used
- * @argv: The aray containing the command-line arguments
- * Return: 0 on success, 98 on failure
- */
-int main(int argc, char *argv[])
-{
-	int t;
-	int u;
-
-	if (argc != 3)
-		print_error();
-	for (t = 1; t < argc; t++)
-	{
-		u = 0;
-
-		while (argv[t][u])
-		{
-			if (!is_digit(argv[t][u]))
-				print_error();
-			u++;
-		}
-	}
-
-	multiply(argv[1], argv[2]);
-
-	return (0);
 }
 
 /**
@@ -107,4 +77,33 @@ void multiply(char *num1, char *num2)
 	print_output(output);
 	free(output);
 
+}
+
+/**
+ * main - Entry point of the program
+ * @argc: The number of command-line arguments
+ * @argv: The array containing the command-line arguments
+ * Return: 0 on success, 98 on failure
+ */
+int main(int argc, char *argv[])
+{
+	int t;
+	int u;
+
+	if (argc != 3)
+		print_error();
+	for (t = 1; t < argc; t++)
+	{
+		u = 0;
+
+		while (argv[t][u])
+		{
+			if (!is_digit(argv[t][u]))
+				print_error();
+			u++;
+		}
+	}
+	multiply(argv[1], argv[2]);
+
+	return (0);
 }
