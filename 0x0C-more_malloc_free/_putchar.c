@@ -1,5 +1,4 @@
-#include "main.h"
-#include <stdio.h>
+#include <unistd.h>
 
 /**
  * _putchar - The function that writes the character k to a stdout
@@ -8,5 +7,5 @@
  */
 int _putchar(char k)
 {
-	return (putchar(k));
+	return (write(1, &k, 1));
 }

@@ -3,33 +3,44 @@
 #include <stdlib.h>
 
 /**
- * print_output - The function prints the output of the string
- * @output: The output string to be printed
+ * is_digit - The function checks if a string contains a non-digit char
+ * @t: The string to be checked
+ *
+ * Return: 0 if a non-digit is passed, 1 otherwise
  */
-void print_output(char *output)
+int is_digit(char *t)
 {
-	int t = 0;
+	int u = 0;
 
-	while (output[t] == '0' && output[t + 1] != '\0')
-		t++;
-
-	while (output[t] != '\0')
-		_putchar(output[t++]);
-	_putchar('\n');
+	while (t[u])
+	{
+		if (t[u] < '0' || t[u] > '9')
+			return (0);
+		u++;
+	}
+	return (1);
 }
 
 /**
- * is_digit - The function checks if a character is a digit
- * @k: The chararcter to ckeck
- * Return: 1 if the character is a digit , 0 otherwise
+ * _strlen - The functions returns the length of a string
+ * @t: The string to be checked
+ *
+ * Return: The length of the string
  */
-int is_digit(char k)
+int _strlen(char *t)
 {
-	return (k >= '0' && k <= '9');
+	int len = 0;
+
+	while (t[len] != '\0')
+	{
+		len++;
+	}
+	return (len);
 }
 
 /**
- * print_error - The funcion prints the "Error" and exits with status 98.
+ * print_error - The function prints the "Error" message and exits
+ * with status 98.
  */
 void print_error(void)
 {
@@ -38,72 +49,54 @@ void print_error(void)
 }
 
 /**
- * multiply - The function gives a product of two positive numbers represented
- * as strings
- * @num1: The first numbers as a string
- * @num2: The second number as a string
- */
-void multiply(char *num1, char *num2)
-{
-	int len1 = 0, len2 = 0, len_output = 0;
-	int t, u, carry, product;
-
-	char *output;
-
-	while (num1[len1])
-		len1++;
-	while (num2[len2])
-		len2++;
-
-	len_output = len1 + len2;
-	output = malloc(sizeof(char) * (len_output + 1));
-
-	if (output == NULL)
-		print_error();
-	for (t = 0; t < len_output; t++)
-		output[t] = '0';
-	for (t = len1 - 1; t >= 0; t--)
-	{
-		carry = 0;
-		for (u = len2 - 1; u >= 0; u--)
-		{
-			product = (num1[t] - '0') * (num2[u] - '0') +
-				(output[t + u + 1] - '0') + carry;
-			output[t + u + 1] = (product % 10) + '0';
-			carry = product / 10;
-		}
-		output[t + u + 1] += carry;
-	}
-	print_output(output);
-	free(output);
-
-}
-
-/**
- * main - Entry point of the program
- * @argc: The number of command-line arguments
+ * main - The main entry point of the program
+ * @argc: The number of command-line arguments used
  * @argv: The array containing the command-line arguments
  * Return: 0 on success, 98 on failure
  */
 int main(int argc, char *argv[])
 {
-	int t;
-	int u;
+	char *t1, *t2;
+	int len1, len2, len, j, carry, digit1, digit2, *product, v = 0;
 
 	if (argc != 3)
 		print_error();
-	for (t = 1; t < argc; t++)
+	t1 = argv[1];
+	t2 = argv[2];
+	if (!is_digit(t1) || !is_digit(t2))
+		print_error();
+	len1 = _strlen(t1);
+	len2 = _strlen(t2);
+	len = len1 + len2 + 1;
+	product = malloc(sizeof(int) * len);
+	if (!product)
+		return (1);
+	for (j = 0; j <= len1 + len2; j++)
+		product[j] = 0;
+	for (len1 = len1 - 1; len1 >= 0; len1--)
 	{
-		u = 0;
-
-		while (argv[t][u])
+		digit1 = t1[len1] - '0';
+		carry = 0;
+		for (len2 = _strlen(t2) - 1; len2 >= 0; len2--)
 		{
-			if (!is_digit(argv[t][u]))
-				print_error();
-			u++;
+			digit2 = t2[len2] - '0';
+			carry += product[len1 + len2 + 1] + (digit1 * digit2);
+			product[len1 + len2 + 1] = carry % 10;
+			carry /= 10;
 		}
+		if (carry > 0)
+			product[len1 + len2 + 1] += carry;
 	}
-	multiply(argv[1], argv[2]);
-
+	for (j = 0; j < len - 1; j++)
+	{
+		if (product[j])
+			v = 1;
+		if (v)
+			_putchar(product[j] + '0');
+	}
+	if (!v)
+		_putchar('0');
+	_putchar('\n');
+	free(product);
 	return (0);
 }
