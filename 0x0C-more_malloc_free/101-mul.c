@@ -49,30 +49,24 @@ void print_error(void)
 }
 
 /**
- * main - The main entry point of the program
- * @argc: The number of command-line arguments used
- * @argv: The array containing the command-line arguments
- * Return: 0 on success, 98 on failure
+ * multiply_strings = The function multiply two strings representing numbers
+ * @t1: The first number as a string.
+ * @t2: The second number as a string.
  */
-int main(int argc, char *argv[])
+void multiply_strings(char *t1, char *t2)
 {
-	char *t1, *t2;
 	int len1, len2, len, j, carry, digit1, digit2, *product, v = 0;
 
-	if (argc != 3)
-		print_error();
-	t1 = argv[1];
-	t2 = argv[2];
-	if (!is_digit(t1) || !is_digit(t2))
-		print_error();
 	len1 = _strlen(t1);
 	len2 = _strlen(t2);
 	len = len1 + len2 + 1;
 	product = malloc(sizeof(int) * len);
 	if (!product)
-		return (1);
-	for (j = 0; j <= len1 + len2; j++)
+		exit(1);
+	for (j = 0; j < len; j++)
+	{
 		product[j] = 0;
+	}
 	for (len1 = len1 - 1; len1 >= 0; len1--)
 	{
 		digit1 = t1[len1] - '0';
@@ -98,5 +92,20 @@ int main(int argc, char *argv[])
 		_putchar('0');
 	_putchar('\n');
 	free(product);
+}
+
+/**
+ * main - The main entry point of the program.
+ * @argc: The number of command-line arguments used.
+ * @argv: The array containing the command-line arguments.
+ * Return: 0 on success, 98 on failure.
+ */
+int main(int argc, char *argv[])
+{
+	if (argc != 3 || !is_digit(argv[1]) || !is_digit(argv[2]))
+		print_error();
+
+	multiply_strings(argv[1], argv[2]);
+
 	return (0);
 }
