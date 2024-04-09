@@ -8,7 +8,7 @@
  *
  * Return: 0 if a non-digit is passed, 1 otherwise
  */
-int is_digit(char *t)
+int is_digit(const char *t)
 {
 	int u = 0;
 
@@ -27,7 +27,7 @@ int is_digit(char *t)
  *
  * Return: The length of the string
  */
-int _strlen(char *t)
+int _strlen(const char *t)
 {
 	int len = 0;
 
@@ -53,7 +53,7 @@ void print_error(void)
  * @t1: The first number as a string.
  * @t2: The second number as a string.
  */
-void multiply_strings(char *t1, char *t2)
+void multiply_strings(const char *t1, const char *t2)
 {
 	int len1, len2, len, j, carry, digit1, digit2, *product, v = 0;
 
