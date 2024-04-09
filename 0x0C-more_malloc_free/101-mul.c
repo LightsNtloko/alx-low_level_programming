@@ -52,6 +52,9 @@ void print_error(void)
  * multiply_strings = The function multiply two strings representing numbers
  * @t1: The first number as a string.
  * @t2: The second number as a string.
+ *
+ * This function multiplies two strings representing numbere
+ * and prints the result.
  */
 void multiply_strings(const char *t1, const char *t2)
 {
