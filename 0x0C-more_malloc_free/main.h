@@ -12,5 +12,6 @@ void print_error(void);
 int _strlen(char *t);
 int main(int argc, char *argv[]);
 int _putchar(char k);
+void multiply_strings(const char *t1, const char *t2);
 
 #endif /* MAIN_H */
