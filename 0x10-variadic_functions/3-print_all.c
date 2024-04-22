@@ -7,7 +7,6 @@
 void print_all(const char * const format, ...)
 {
 	int i, scan_stat;
-
 	char *str;
 	va_list spc;
 
@@ -35,6 +34,7 @@ void print_all(const char * const format, ...)
 				if (str == NULL)
 					str = "(nil)";
 				printf("%s", str);
+				scan_stat = 0;
 				break;
 			default:
 				scan_stat = 1;
