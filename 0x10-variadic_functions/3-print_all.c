@@ -64,6 +64,12 @@ void print_all(const char * const format, ...)
 	int num;
 	float fnum;
 
+	if (format == NULL)
+	{
+		printf("\n");
+		return;
+	}
+
 	va_start(args, format);
 	while (format && format[i])
 	{
