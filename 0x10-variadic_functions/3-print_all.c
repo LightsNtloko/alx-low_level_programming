@@ -58,6 +58,12 @@ void print_string(char *str, int sep)
  */
 void print_all(const char * const format, ...)
 {
+	if (format == NULL)
+	{
+		printf("\n");
+		return ();
+	}
+
 	va_list args;
 	unsigned int i = 0;
 
