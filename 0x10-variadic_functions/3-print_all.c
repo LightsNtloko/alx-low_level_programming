@@ -58,14 +58,11 @@ void print_string(char *str, int sep)
  */
 void print_all(const char * const format, ...)
 {
-	if (format == NULL)
-	{
-		printf("\n");
-		return ();
-	}
-
 	va_list args;
 	unsigned int i = 0;
+	char *str;
+	int num;
+	float fnum;
 
 	va_start(args, format);
 	while (format && format[i])
@@ -73,16 +70,20 @@ void print_all(const char * const format, ...)
 		switch (format[i])
 		{
 			case 'c':
-				print_char(va_arg(args, int), format[i + 1]);
+				num = va_arg(args, int);
+				print_char(num, format[i + 1]);
 				break;
 			case 'i':
-				print_int(va_arg(args, int), format[i + 1]);
+				num = va_arg(args, int);
+				print_int(num, format[i + 1]);
 				break;
 			case 'f':
-				print_float(va_arg(args, double), format[i + 1]);
+				fnum = va_arg(args, double);
+				print_float(fnum, format[i + 1]);
 				break;
 			case 's':
-				print_string(va_arg(args, char *), format[i + 1]);
+				str = va_arg(args, char *);
+				print_string(str, format[i + 1]);
 				break;
 			default:
 				i++;
