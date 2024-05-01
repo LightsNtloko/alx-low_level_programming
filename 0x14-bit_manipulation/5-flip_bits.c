@@ -3,8 +3,8 @@
 /**
  * flip_bits - The function that returns the number of bits that will be needed
  * to flip to get from one number to another.
- * @num1: The first number.
- * @num2: The second number.
+ * @n: The first number.
+ * @m: The second number.
  *
  * Return: The number of bits needed to flip.
  */
