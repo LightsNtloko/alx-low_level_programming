@@ -9,9 +9,13 @@
  */
 int mod(int a, int b)
 {
-	if (b == 0)
+	if (b != 0)
 	{
-		printf("Error: Division by zero\n");
+		return (a % b);
+	}
+	else
+	{
+		printf("Error: Modulo by zero\n");
 		return (0);
 	}
 }
