@@ -4,7 +4,7 @@
 
 /**
  * add_node - The function add node at the beginning of a list_t list
- * @h: The pointer to head of the list
+ * @head: The pointer to head of the list
  * @str: The string to be copied and added to the new node.
  *
  * Return: The address of the new element, or NULL if it failed.
