@@ -1,20 +1,21 @@
-section .data
-	hello db "Hello, Holberton", 0
+		extern	printf		; The C functin that must be called
 
-section .text
-	global _asm_start
+	section .info			; Data section, wit declared variables
+msg:	db "Hello, Holberton", 0	; The C strings requires 0
+fmt:	db "%s", 10, 0			; The printf format, "\n", '0'
 
-_start:
-	; Call printf function from C library
-	extern printf
+	section .text			; The code section
 
-	; Push the address of the string onto the stack
-	push    hello
-	; Call printf with the address of the string as argument
-	call printf
+	global main			; The standard gcc compiler entry point
+main:					; The lable for program entry point
+	push	rbp			; Set u the stack frame, and alligned
 
+	mov	rdi,fmt
+	mov	rsi,msg
+	mov	rax,0			; else can be xor rax,rax
+	call	printf			; Call the C fuction
 
-	; Exit the program
-	mov eax, 60	; syscall number for exit
-	xor edi, edi	; exit code 0
-	syscall
+	pop	rbp			; Then restore the stack
+
+	mov	rax,0			; normal, no error, return value
+	ret				; return
