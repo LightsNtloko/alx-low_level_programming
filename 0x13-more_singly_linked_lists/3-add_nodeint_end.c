@@ -6,7 +6,7 @@
  * add_nodeint_end - The function that adds a new node at the end of
  * a listint_t list
  * @head: The double pointer to the head of the list
- * @str: The integer variable to add the new node 
+ * @n: The integer variable to add the new node
  *
  * Return: The address of the new element, or NULL if it failed.
  */
@@ -28,15 +28,13 @@ listint_t *add_nodeint_end(listint_t **head, const int n)
 		*head = new_nodeint;
 		return (new_nodeint);
 	}
-	else
+
+	last = *head;
+	while (last->next != NULL)
 	{
-		last = *head;
-		while (last->next != NULL)
-		{
-			last = last->next;
-		}
-		last->next = new_nodeint;
+		last = last->next;
 	}
+	last->next = new_nodeint;
 
 	return (new_nodeint);
 }
