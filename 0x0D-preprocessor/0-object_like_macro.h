@@ -1,5 +1,5 @@
-#ifndef MACRO_H
-#define MACRO_H
+#ifndef SIZE_H
+#define SIZE_H
 
 /**
  * File: header file that defines a macro named SIZE as an abbreviation
