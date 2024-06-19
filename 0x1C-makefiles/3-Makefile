@@ -7,16 +7,8 @@ OBJ = $(SRC:.c=.o)
 NAME = school
 EM = rm -f
 
-# Rule to build the executable
-all: $(NAME)
-
-# Rule to link the object file to create the executable
-$(NAME): $(OBJ)
+all: $(OBJ)
 	$(CC) $(OBJ) -o $(NAME)
-
-# Rule to compile .c fle to .o file
-%.o: %.c
-	$(CC) -c -o $@ $<
 
 # Rule to delete the executable and temporary files
 clean:
@@ -24,13 +16,10 @@ clean:
 
 # Rule to delete the object file
 oclean:
-	$(RM) $(OBJ)
+	$(RM) $(NAME)
 
 # Rule to delete all temporary files, object files and the executable
 fclean: clean oclean
 
 # Rule to force recompile all source files
 re: fclean all
-
-# Phony targets (do not correspond to actual files)
-.PHONY: all clean oclean fclean re
