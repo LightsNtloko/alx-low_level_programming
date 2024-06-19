@@ -4,8 +4,8 @@
 CC = gcc
 
 # Define the source file
-SRCS = main.c school.c
+SRC = main.c school.c
 
 # Rule to build the executable
 all:
-	$(CC) $(SRCS) -o school
+	$(CC) $(SRC) -o school
