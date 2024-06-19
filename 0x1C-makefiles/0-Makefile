@@ -1,0 +1,11 @@
+# 0-Makefile
+
+# Define the target executable
+TARGET = school
+
+# Define the source file
+SRCS = main.c school.c
+
+# Rule to build the executable
+all:
+	gcc $(SRCS) -o $(TARGET)
