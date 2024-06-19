@@ -1,0 +1,33 @@
+# 3-Makefile
+
+# The required varables
+CC = gcc
+SRC = main.c school.c
+OBJ = $(SRC:.c=.o)
+NAME = school
+EM = rm -f
+
+# Rule to build the executable
+all: $(NAME)
+
+# Rule to link the object file to create the executable
+$(NAME): $(OBJ)
+	$(CC) $(OBJ) -o $(NAME)
+
+# Rule to compile .c fle to .o file
+%.o: %.c
+	$(CC) -c -o $@ $<
+
+# Rule to remove the executable and temporary files
+clean:
+	$(RM) *~ $(NAME)
+
+# Rule to remove the object file
+oclean:
+	$(RM) $(OBJ)
+
+# Rule to remove all temporary files, object files and the executable
+fclean: clean oclean
+
+# Rule to force recompile all source files
+re: fclean all
