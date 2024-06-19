@@ -1,0 +1,22 @@
+# 2-Makefile
+
+# The required varables
+CC = gcc
+SRC = main.c school.c
+OBJ = $(SRC:.c=.o)
+NAME = school
+
+# Rule to build the executable
+all: $(NAME)
+
+# Rule to link the object file to create the executable
+$(NAME): $(OBJ)
+	$(CC) $(OBJ) -o $(NAME)
+
+# Rule to compile .c file to .o file
+%.o: %.c
+	$(CC) -c -o $@ $<
+
+# Then clean rule t remove object file and the executable
+clean:
+	rm -f $(OBJ) $(NAME)
