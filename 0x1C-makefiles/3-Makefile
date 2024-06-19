@@ -18,15 +18,15 @@ $(NAME): $(OBJ)
 %.o: %.c
 	$(CC) -c -o $@ $<
 
-# Rule to remove the executable and temporary files
+# Rule to delete the executable and temporary files
 clean:
-	$(RM) *~ \#* $(NAME)
+	$(RM) *~ $(NAME)
 
-# Rule to remove the object file
+# Rule to delete the object file
 oclean:
 	$(RM) $(OBJ)
 
-# Rule to remove all temporary files, object files and the executable
+# Rule to delete all temporary files, object files and the executable
 fclean: clean oclean
 
 # Rule to force recompile all source files
