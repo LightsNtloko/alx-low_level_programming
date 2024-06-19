@@ -1,0 +1,11 @@
+# 1-Makefile
+
+# Define the compiler process
+CC = gcc
+
+# Define the source file
+SRCS = main.c school.c
+
+# Rule to build the executable
+all:
+	$(CC) $(SRCS) -o school
