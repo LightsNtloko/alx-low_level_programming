@@ -16,7 +16,7 @@ clean:
 
 # Rule to delete the object file
 oclean:
-	$(RM) $(NAME)
+	$(RM) $(OBJ)
 
 # Rule to delete all temporary files, object files and the executable
 fclean: clean oclean
