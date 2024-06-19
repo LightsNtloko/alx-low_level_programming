@@ -20,7 +20,7 @@ $(NAME): $(OBJ)
 
 # Rule to remove the executable and temporary files
 clean:
-	$(RM) *~ $(NAME)
+	$(RM) *~ \#* $(NAME)
 
 # Rule to remove the object file
 oclean:
