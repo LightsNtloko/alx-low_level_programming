@@ -31,3 +31,6 @@ fclean: clean oclean
 
 # Rule to force recompile all source files
 re: fclean all
+
+# Phony targets (do not correspond to actual files)
+.PHONY: all clean oclean fclean re
