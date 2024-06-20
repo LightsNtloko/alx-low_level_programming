@@ -1,0 +1,34 @@
+# 3-Makefile
+
+# Variables
+CC = gcc
+SRC = main.c school.c
+OBJ = $(SRC:.c=.o)
+NAME = school
+RM = rm -f
+CP = cp
+
+all: $(NAME)
+
+$(NAME): $(OBJ)
+	@echo "gcc	$(OBJ) -o $(NAME)"
+	$(CC) $(OBJ) -o $(NAME)
+
+%.o: %.c
+	@echo "gcc	-c -o $@ $<"
+	$(CC) -c -o $@ $<
+
+clean:
+	$(RM) *~ \#* $(NAME)
+
+oclean:
+	$(RM) $(OBJ)
+
+fclean: clean oclean
+
+re: fclean all
+
+backup:
+	$(CP) main.c main.c~
+
+.PHONY: all clean oclean fclean re
