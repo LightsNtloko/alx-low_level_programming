@@ -12,6 +12,7 @@
 int update_value(hash_node_t *node, const char *value)
 {
 	char *new_value = strdup(value);
+
 	if (new_value == NULL)
 	{
 		return (0);
@@ -31,6 +32,7 @@ int update_value(hash_node_t *node, const char *value)
 hash_node_t *create_new_node(const char *key, const char *value)
 {
 	hash_node_t *new_node = malloc(sizeof(hash_node_t));
+
 	if (new_node == NULL)
 	{
 		return (NULL);
@@ -66,6 +68,7 @@ hash_node_t *create_new_node(const char *key, const char *value)
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
 	unsigned long int index;
+
 	hash_node_t *head, *new_node;
 
 	if (ht == NULL || key == NULL || *key == '\0')
