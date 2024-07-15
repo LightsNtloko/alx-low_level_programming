@@ -6,7 +6,7 @@
 /**
  * struct hash_node_s - The node of a hash table
  * @key: The key, string
- * The key is unique in the hash table
+ * Description: The key is unique in the hash table
  * @value: The value corresponding to a key
  * @next: A pointer to the next node of the list
  */
@@ -18,7 +18,7 @@ typedef struct hash_node_s
 } hash_node_t;
 
 /**
- * struct hash_tables_s - The hash table data structure
+ * struct hash_table_s - The hash table data structure
  * @size: The size of the array
  * @array: An array of size @size
  * Description: Each cell of this array is a pointer to the first node of a
