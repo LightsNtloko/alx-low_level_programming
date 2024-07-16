@@ -16,7 +16,7 @@ void hash_table_print(const hash_table_t *ht)
 		return;
 	}
 
-	printf("[");
+	printf("{");
 	for (k = 0; k < ht->size; k++)
 	{
 		node = ht->array[k];
@@ -31,5 +31,5 @@ void hash_table_print(const hash_table_t *ht)
 			node = node->next;
 		}
 	}
-	printf("]\n");
+	printf("}\n");
 }
